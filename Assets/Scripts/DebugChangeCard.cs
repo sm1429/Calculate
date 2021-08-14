@@ -5,6 +5,7 @@ using UnityEngine;
 public class DebugChangeCard : MonoBehaviour
 {
     private CardModel cardModel;
+    private CardFlipper flipper;
     private int cardIndex = 0;
 
     public GameObject card;
@@ -12,6 +13,7 @@ public class DebugChangeCard : MonoBehaviour
     private void Awake()
     {
         cardModel = card.GetComponent<CardModel>();
+        flipper = card.GetComponent<CardFlipper>();
     }
 
     private void OnGUI()
@@ -21,12 +23,28 @@ public class DebugChangeCard : MonoBehaviour
             if (cardIndex >= cardModel.faces.Length)
             {
                 cardIndex = 0;
-                cardModel.ToglleFace(false);
+                flipper.FlipCard(
+                    cardModel.faces[cardModel.faces.Length - 1],
+                    cardModel.cardBack,
+                    -1);
             }
             else
             {
-                cardModel.cardIndex = cardIndex;
-                cardModel.ToglleFace(true);
+                if (cardIndex > 0)
+                {
+                    flipper.FlipCard(
+                        cardModel.faces[cardIndex - 1],
+                        cardModel.faces[cardIndex],
+                        cardIndex);
+                }
+                else
+                {
+                    flipper.FlipCard(
+                        cardModel.cardBack,
+                        cardModel.faces[cardIndex],
+                        cardIndex);
+                }
+
                 cardIndex++;
             }
         }

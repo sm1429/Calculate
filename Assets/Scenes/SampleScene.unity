@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 531401135}
   - component: {fileID: 531401134}
   - component: {fileID: 531401136}
+  - component: {fileID: 531401137}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -356,6 +357,52 @@ MonoBehaviour:
   - {fileID: 7824175158947753115, guid: d4ba40610a32a43afab067f5f52c760d, type: 3}
   cardBack: {fileID: 5842304741937258622, guid: d4ba40610a32a43afab067f5f52c760d, type: 3}
   cardIndex: 0
+--- !u!114 &531401137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531401133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a754944a112b742f58d38fef79ee84fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -2
+      outSlope: -2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4999999
+      value: 0.00000020454172
+      inSlope: -0.0000004172325
+      outSlope: -0.0000004172325
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1.9999992
+      outSlope: 1.9999992
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 0.5
 --- !u!1 &1226521121
 GameObject:
   m_ObjectHideFlags: 0
